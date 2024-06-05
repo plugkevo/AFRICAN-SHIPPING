@@ -45,7 +45,7 @@
                 android:id="@+id/btnEnterGoods"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/blue"
+                android:backgroundTint="@color/dark_blue"
                 android:text="Click me!"
                 android:textColor="@android:color/white" />
 
@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Click me!"
-                android:backgroundTint="@color/blue"
+                android:backgroundTint="@color/dark_blue"
                 android:textColor="@android:color/white" />
 
         </LinearLayout>
