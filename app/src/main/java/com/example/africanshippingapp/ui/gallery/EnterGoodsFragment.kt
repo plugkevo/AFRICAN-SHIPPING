@@ -34,6 +34,11 @@ class EnterGoodsFragment : Fragment() {
             val intent = Intent(activity, InsertionActivity::class.java) // replace NextActivity with your desired activity
             startActivity(intent)
         }
+        val buttons: Button = binding.btnEnterStoreGoods // assuming you have a button in your layout with id "button"
+        buttons.setOnClickListener {
+            val intents = Intent(activity, StoreGoodsInsertion::class.java) // replace NextActivity with your desired activity
+            startActivity(intents)
+        }
 
         return root
     }

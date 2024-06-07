@@ -5,4 +5,5 @@ data class GoodsModel(
     var GoodsName: String? = null,
     var GoodsNumber: String? = null,
     var StoreName: String? = null
+
 )

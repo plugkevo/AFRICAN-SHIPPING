@@ -6,11 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.africanshippingapp.databinding.FragmentViewGoodsBinding
-import com.example.africanshippingapp.ui.gallery.InsertionActivity
 
 class GoodsViewFragment : Fragment() {
 
@@ -36,6 +34,7 @@ class GoodsViewFragment : Fragment() {
             val intent = Intent(activity, ViewGoods::class.java) // replace NextActivity with your desired activity
             startActivity(intent)
         }
+
         return root
     }
 
