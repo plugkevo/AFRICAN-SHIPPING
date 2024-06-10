@@ -1,4 +1,4 @@
-package com.example.africanshippingapp
+package com.example.africanshippingapp.ui.ViewGoods
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,9 +8,12 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.example.africanshippingapp.FetchingActivity
+import com.example.africanshippingapp.GoodsModel
+import com.example.africanshippingapp.R
 import com.google.firebase.database.FirebaseDatabase
 
-class GoodsDetailsActivity : AppCompatActivity() {
+class TruckGoodsDetailsActivity : AppCompatActivity() {
 
     private lateinit var tvGoodsId: TextView
     private lateinit var tvGoodsName: TextView
@@ -21,7 +24,7 @@ class GoodsDetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_goods_details)
+        setContentView(R.layout.activity_truck_goods_details)
 
         initView()
         setValuesToViews()

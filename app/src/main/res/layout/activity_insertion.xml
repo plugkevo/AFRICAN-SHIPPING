@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:background="#e2f8fb"
-    tools:context=".ui.gallery.InsertionActivity">
+    tools:context=".ui.EnterGoods.InsertionActivity">
 
     <EditText
         android:id="@+id/etGoodsName"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <application
         android:allowBackup="true"
@@ -11,15 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AFRICANSHIPPINGAPP.NoActionBar"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
-            android:name=".ui.gallery.StoreGoodsInsertion"
+            android:name=".ui.ViewGoods.StoreGoodsDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ViewGoods.ViewStoreGoods"
+            android:exported="false" />
+        <activity
+            android:name=".ui.EnterGoods.StoreGoodsInsertion"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AFRICANSHIPPINGAPP.NoActionBar">
+            android:theme="@style/Theme.AFRICANSHIPPINGAPP.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,13 +33,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.gallery.InsertionActivity"
+            android:name=".ui.EnterGoods.InsertionActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.slideshow.ViewGoods"
+            android:name=".ui.ViewGoods.ViewTruckGoods"
             android:exported="true" />
         <activity
-            android:name=".GoodsDetailsActivity"
+            android:name=".ui.ViewGoods.TruckGoodsDetailsActivity"
             android:exported="true" />
 
         <meta-data

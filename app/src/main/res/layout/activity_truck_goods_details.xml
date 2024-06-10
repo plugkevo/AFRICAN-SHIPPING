@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#e2f8fb"
-    tools:context=".GoodsDetailsActivity">
+    tools:context=".ui.ViewGoods.TruckGoodsDetailsActivity">
 
 
     <Button

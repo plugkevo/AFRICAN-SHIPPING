@@ -1,10 +1,9 @@
-package com.example.africanshippingapp.ui.slideshow
+package com.example.africanshippingapp.ui.ViewGoods
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.SearchView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +11,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.africanshippingapp.GoodsDetailsActivity
 import com.example.africanshippingapp.GoodsModel
 import com.example.africanshippingapp.R
 import com.example.africanshippingapp.ViewGoodsAdapter
@@ -23,7 +21,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class ViewGoods : AppCompatActivity() {
+class ViewTruckGoods : AppCompatActivity() {
     private lateinit var empRecyclerView: RecyclerView
     private lateinit var tvLoadingData: TextView
     private lateinit var empList: ArrayList<GoodsModel>
@@ -38,8 +36,7 @@ class ViewGoods : AppCompatActivity() {
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener {
-            val intent = Intent(this, ViewGoods::class.java)
-            startActivity(intent)
+            recreate()
         }
         searchBar = findViewById(R.id.searchBar)
 
@@ -89,7 +86,7 @@ class ViewGoods : AppCompatActivity() {
                     mAdapter.setOnItemClickListener(object : ViewGoodsAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
 
-                            val intent = Intent(this@ViewGoods, GoodsDetailsActivity::class.java)
+                            val intent = Intent(this@ViewTruckGoods, TruckGoodsDetailsActivity::class.java)
 
                             //put extras
                             intent.putExtra("goodsId", empList[position].GoodsId)
@@ -134,7 +131,7 @@ class ViewGoods : AppCompatActivity() {
                     //when an item is clicked the all the employee data is displayed in a different page
                     mAdapter.setOnItemClickListener(object : ViewGoodsAdapter.onItemClickListener {
                         override fun onItemClick(position: Int) {
-                            val intent = Intent(this@ViewGoods, GoodsDetailsActivity::class.java)
+                            val intent = Intent(this@ViewTruckGoods, TruckGoodsDetailsActivity::class.java)
 
                             //put extras
                             intent.putExtra("goodsId", searchResults[position].GoodsId)

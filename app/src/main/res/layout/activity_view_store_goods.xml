@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#e2f8fb"
-    tools:context=".ui.ViewGoods.ViewTruckGoods">
+    tools:context=".ui.ViewGoods.ViewStoreGoods">
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -55,7 +55,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="8dp"
                 android:backgroundTint="@color/blue"
-            />
+                />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.africanshippingapp.ui.ViewGoods.TruckGoodsDetailsActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -59,7 +60,7 @@ class FetchingActivity : AppCompatActivity() {
                     mAdapter.setOnItemClickListener(object : goodsAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
 
-                            val intent = Intent(this@FetchingActivity, GoodsDetailsActivity::class.java)
+                            val intent = Intent(this@FetchingActivity, TruckGoodsDetailsActivity::class.java)
 
                             //put extras
                             intent.putExtra("goodsId", empList[position].GoodsId)

@@ -1,4 +1,4 @@
-package com.example.africanshippingapp.ui.gallery
+package com.example.africanshippingapp.ui.EnterGoods
 
 import android.content.Intent
 import android.os.Bundle

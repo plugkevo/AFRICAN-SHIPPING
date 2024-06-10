@@ -1,4 +1,4 @@
-package com.example.africanshippingapp.ui.slideshow
+package com.example.africanshippingapp.ui.ViewGoods
 
 import android.content.Intent
 import android.os.Bundle
@@ -31,8 +31,13 @@ class GoodsViewFragment : Fragment() {
 
         val button: Button = binding.btnViewTruckGoods // assuming you have a button in your layout with id "button"
         button.setOnClickListener {
-            val intent = Intent(activity, ViewGoods::class.java) // replace NextActivity with your desired activity
+            val intent = Intent(activity, ViewTruckGoods::class.java) // replace NextActivity with your desired activity
             startActivity(intent)
+        }
+        val button2: Button = binding.btnviewStoreGoods // assuming you have a button in your layout with id "button"
+        button2.setOnClickListener {
+            val intent2 = Intent(activity, ViewStoreGoods::class.java) // replace NextActivity with your desired activity
+            startActivity(intent2)
         }
 
         return root

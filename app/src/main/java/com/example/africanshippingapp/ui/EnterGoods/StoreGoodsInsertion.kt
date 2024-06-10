@@ -1,4 +1,4 @@
-package com.example.africanshippingapp.ui.gallery
+package com.example.africanshippingapp.ui.EnterGoods
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
