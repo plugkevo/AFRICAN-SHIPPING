@@ -24,7 +24,7 @@ import com.google.firebase.database.ValueEventListener
 class ViewStoreGoods : AppCompatActivity() {
     private lateinit var empRecyclerView: RecyclerView
     private lateinit var tvLoadingData: TextView
-    private lateinit var empList: ArrayList<GoodsModel>
+    private lateinit var goodsList: ArrayList<GoodsModel>
     private lateinit var dbRef: DatabaseReference
     private lateinit var searchBar: TextView
 
@@ -50,7 +50,7 @@ class ViewStoreGoods : AppCompatActivity() {
         empRecyclerView.setHasFixedSize(true)
         tvLoadingData = findViewById(R.id.tvLoadingDat)
 
-        empList = arrayListOf<GoodsModel>()
+        goodsList = arrayListOf<GoodsModel>()
 
         getEmployeesData()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -68,27 +68,28 @@ class ViewStoreGoods : AppCompatActivity() {
 
         dbRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                empList.clear()
+                goodsList.clear()
                 //getting data
                 if (snapshot.exists()){
                     for (empSnap in snapshot.children){
                         val empData = empSnap.getValue(GoodsModel::class.java)
-                        empList.add(empData!!)
+                        goodsList.add(empData!!)
                     }
-                    val mAdapter = ViewGoodsAdapter(empList)
+                    val mAdapter = ViewGoodsAdapter(goodsList)
                     empRecyclerView.adapter = mAdapter
 
                     //when an item is clicked the all the employee data is displayed in a different page
                     mAdapter.setOnItemClickListener(object : ViewGoodsAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
 
-                            val intent = Intent(this@ViewStoreGoods, TruckGoodsDetailsActivity::class.java)
+                            val intent = Intent(this@ViewStoreGoods, StoreGoodsDetails::class.java)
 
                             //put extras
-                            intent.putExtra("goodsId", empList[position].GoodsId)
-                            intent.putExtra("goodsName", empList[position].GoodsName)
-                            intent.putExtra("goodsNumber", empList[position].GoodsNumber)
-                            intent.putExtra("storeName", empList[position].StoreName)
+                            intent.putExtra("goodsId", goodsList[position].GoodsId)
+                            intent.putExtra("goodsName", goodsList[position].GoodsName)
+                            intent.putExtra("goodsNumber", goodsList[position].GoodsNumber)
+                            intent.putExtra("storeName", goodsList[position].StoreName)
+                            intent.putExtra("deliveryStatus", goodsList[position].deliveryStatus)
                             startActivity(intent)
                         }
 
@@ -127,13 +128,14 @@ class ViewStoreGoods : AppCompatActivity() {
                     //when an item is clicked the all the employee data is displayed in a different page
                     mAdapter.setOnItemClickListener(object : ViewGoodsAdapter.onItemClickListener {
                         override fun onItemClick(position: Int) {
-                            val intent = Intent(this@ViewStoreGoods, TruckGoodsDetailsActivity::class.java)
+                            val intent = Intent(this@ViewStoreGoods, ViewStoreGoods::class.java)
 
                             //put extras
                             intent.putExtra("goodsId", searchResults[position].GoodsId)
                             intent.putExtra("goodsName", searchResults[position].GoodsName)
                             intent.putExtra("goodsNumber", searchResults[position].GoodsNumber)
                             intent.putExtra("storeName", searchResults[position].StoreName)
+                            intent.putExtra("deliveryStatus", searchResults[position].deliveryStatus)
                             startActivity(intent)
                         }
                     })

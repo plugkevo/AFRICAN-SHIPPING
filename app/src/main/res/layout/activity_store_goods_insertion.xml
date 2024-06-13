@@ -55,6 +55,8 @@
         </RadioGroup>
     </LinearLayout>
 
+
+
     <EditText
         android:id="@+id/etGoodsNo"
         android:layout_width="0dp"
@@ -68,6 +70,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etStore" />
 
+    <LinearLayout
+        android:id="@+id/etdeliveryStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etGoodsNo" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collected" />
+
+            <RadioButton
+                android:id="@+id/radio4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Collected" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+
     <Button
         android:id="@+id/btnSave"
         android:layout_width="140dp"
@@ -78,7 +113,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etGoodsNo" />
+        app:layout_constraintTop_toBottomOf="@+id/etdeliveryStatus" />
 
 
 

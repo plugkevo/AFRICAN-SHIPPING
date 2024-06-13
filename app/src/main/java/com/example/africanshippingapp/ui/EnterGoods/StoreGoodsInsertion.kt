@@ -20,6 +20,7 @@ class StoreGoodsInsertion : AppCompatActivity() {
     private lateinit var btnSaveData: Button
     private lateinit var radioGroup: RadioGroup
     private lateinit var dbRef: DatabaseReference
+    private lateinit var radioGroup2: RadioGroup
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -29,6 +30,7 @@ class StoreGoodsInsertion : AppCompatActivity() {
         etGoodsNo = findViewById(R.id.etGoodsNo)
         btnSaveData = findViewById(R.id.btnSave)
         radioGroup = findViewById(R.id.radioGroup)
+        radioGroup2= findViewById(R.id.radioGroup2)
 
 
         dbRef = FirebaseDatabase.getInstance().getReference("Store_Goods")
@@ -44,17 +46,23 @@ class StoreGoodsInsertion : AppCompatActivity() {
         val GoodName = etGoodsName.text.toString()
         val GoodsNo = etGoodsNo.text.toString()
         var StoreNo = ""
+        var deliveryStatus =""
 
         val selectedId = radioGroup.checkedRadioButtonId
         val radioButton = findViewById<RadioButton>(selectedId)
         StoreNo = radioButton.text.toString()
+
+        val selectedId2 = radioGroup2.checkedRadioButtonId
+        val radioButton2 = findViewById<RadioButton>(selectedId2)
+        deliveryStatus = radioButton2.text.toString()
+
         if (GoodsNo.isEmpty()) {
             etGoodsNo.error = "Please enter Goods Number"
         }
 
         val empId = dbRef.push().key!!
 
-        val employee = GoodsModel(empId, GoodName, GoodsNo, StoreNo)
+        val employee = GoodsModel(empId, GoodName, GoodsNo, StoreNo, deliveryStatus)
 
         dbRef.child(empId).setValue(employee)
             .addOnCompleteListener {
