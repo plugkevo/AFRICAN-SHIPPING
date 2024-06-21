@@ -13,4 +13,16 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="textview_style">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="bg_style">
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="card_color">
+        <item name="android:background">@color/blue</item>
+    </style>
+
 </resources>

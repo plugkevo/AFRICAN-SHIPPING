@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.Home.HomeFragment"
+    style="@style/bg_style"
+
     android:theme="@style/Theme.AFRICANSHIPPINGAPP.NoActionBar">
 
     <LinearLayout
@@ -16,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#e2f8fb"
+        style="@style/textview_style"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,8 +32,9 @@
                 android:fontFamily="serif"
                 android:text="AFRICAN SHIPPING"
                 android:textSize="35dp"
-                android:textColor="@color/black"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                style="@style/textview_style"
+                />
 
 
 
@@ -46,7 +49,6 @@
                 android:layout_height="wrap_content"
                 android:text="Delivering your best shipping options to Africa"
                 android:textAlignment="center"
-                android:textColor="@color/black"
                 android:textSize="25dp"
                 android:textStyle="bold"
                 android:fontFamily="@font/alegreya_bold"
@@ -71,7 +73,6 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/alegreya_bold"
                 android:text="Services offered"
-                android:textColor="@color/black"
                 android:textSize="20dp"
                 android:layout_marginLeft="5dp"/>
 
@@ -79,21 +80,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="1. We offer consolidated shipment from the US to Kenya"
-                android:textColor="@color/black"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="2. Packaging services for your online business"
-                android:textColor="@color/black"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="5dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="3. Delivery services through third party vendors"
-                android:textColor="@color/black"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="5dp"
                 />
@@ -103,7 +101,6 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/alegreya_bold"
                 android:text="Find us in the following platforms"
-                android:textColor="@color/black"
                 android:textSize="20dp"
                 android:layout_marginLeft="5dp"/>
         </LinearLayout>
@@ -139,7 +136,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0712000222"
-                android:textColor="@color/black"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center"/>

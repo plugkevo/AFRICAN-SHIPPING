@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e2f8fb"
+    style="@style/bg_style"
     tools:context=".ui.EnterGoods.EnterGoodsFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        style="@style/textview_style"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,8 +23,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="20dp"
-            android:background="@drawable/border_shadow"
-
+            style="@style/bg_style"
             >
 
             <ImageView
@@ -38,15 +38,14 @@
                 android:layout_height="wrap_content"
                 android:text="Click to Enter the offloaded goods"
                 android:textSize="20dp"
-                android:textColor="@color/black"
                 android:layout_marginTop="10dp"
                 />
             <Button
                 android:id="@+id/btnEnterGoods"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/dark_blue"
                 android:text="Click me!"
+                android:backgroundTint="@color/blue"
                 android:textColor="@android:color/white" />
 
         </LinearLayout>
@@ -55,8 +54,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="20dp"
-            android:background="@drawable/border_shadow"
 
+            style="@style/bg_style"
             >
 
             <ImageView
@@ -70,7 +69,6 @@
                 android:layout_height="wrap_content"
                 android:text="Click to Enter Store goods"
                 android:textSize="20dp"
-                android:textColor="@color/black"
                 android:layout_marginTop="10dp"
                 />
             <Button
@@ -78,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Click me!"
-                android:backgroundTint="@color/dark_blue"
+                android:backgroundTint="@color/blue"
                 android:textColor="@android:color/white" />
 
         </LinearLayout>
