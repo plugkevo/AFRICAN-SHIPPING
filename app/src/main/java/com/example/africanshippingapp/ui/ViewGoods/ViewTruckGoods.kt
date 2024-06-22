@@ -32,7 +32,7 @@ class ViewTruckGoods : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_view_goods)
+        setContentView(R.layout.activity_view_truck_goods)
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener {

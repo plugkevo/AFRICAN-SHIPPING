@@ -30,6 +30,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:visibility="gone"
+        style="@style/textview_style"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

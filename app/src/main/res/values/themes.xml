@@ -25,12 +25,16 @@
 
     <style name="textview_style">
         <item name="android:textColor">@color/black</item>
-        <item name="hintTextColor">#024B85</item>
     </style>
     <style name="bg_style">
         <item name="android:background">#e2f8fb</item>
     </style>
     <style name="card_color">
         <item name="android:background">@color/white</item>
+    </style>
+    <style name="MyViewStyle">
+        <item name="android:background">@drawable/solid_border</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 </resources>

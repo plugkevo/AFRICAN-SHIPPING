@@ -28,7 +28,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#FFFFFF"
                 android:fontFamily="serif"
                 android:text="AFRICAN SHIPPING"
                 android:textSize="35dp"

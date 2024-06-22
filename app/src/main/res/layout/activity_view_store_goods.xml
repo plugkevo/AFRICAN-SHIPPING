@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        style="text_style"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -23,7 +24,6 @@
             android:text="Store Goods"
             android:textAlignment="center"
             android:textSize="30dp"
-            android:textColor="@color/black"
             android:textStyle="bold"/>
 
         <LinearLayout
@@ -40,7 +40,6 @@
                 android:id="@+id/searchBar"
                 android:layout_width="220dp"
                 android:layout_height="60dp"
-                android:background="@drawable/solid_border"
                 android:hint="search....."
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
@@ -76,7 +75,6 @@
         android:layout_height="wrap_content"
         android:text="Loading Data....."
         android:textSize="28sp"
-        android:textColor="@color/black"
         android:textStyle="bold"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"

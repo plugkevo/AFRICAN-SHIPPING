@@ -8,38 +8,41 @@
     tools:context=".ui.ViewGoods.TruckGoodsDetailsActivity">
 
 
-    <Button
-        android:id="@+id/btnUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Update"
-        android:backgroundTint="@color/blue"
-        app:layout_constraintEnd_toStartOf="@+id/btnDelete"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
 
-    <Button
-        android:id="@+id/btnDelete"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:id="@+id/headig_ll"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Delete"
-        android:backgroundTint="@color/blue"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnUpdate"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+        style="@style/textview_style">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Truck Goods Details"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="serif-monospace"
+            android:textAlignment="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+           />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headig_ll"
         app:layout_constraintEnd_toEndOf="parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        style="@style/textview_style">
 
 
         <LinearLayout
@@ -83,7 +86,6 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/black"
                     android:textSize="15sp"
 
                     />
@@ -132,7 +134,6 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/black"
                     android:textSize="15sp"
 
                     />
@@ -185,7 +186,6 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/black"
                     android:textSize="15sp"
 
                     />
@@ -240,7 +240,6 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/black"
                     android:textSize="15sp"
 
                     />
@@ -252,4 +251,32 @@
 
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Update"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Delete"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdate"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
