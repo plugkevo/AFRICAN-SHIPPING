@@ -33,7 +33,7 @@ class StoreGoodsInsertion : AppCompatActivity() {
         radioGroup2= findViewById(R.id.radioGroup2)
 
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Store_Goods")
+        dbRef = FirebaseDatabase.getInstance().getReference("june_store")
 
         btnSaveData.setOnClickListener {
             saveEmployeeData()
@@ -71,6 +71,7 @@ class StoreGoodsInsertion : AppCompatActivity() {
                 etGoodsName.text.clear()
                 etGoodsNo.text.clear()
                 radioGroup.clearCheck()
+                radioGroup2.clearCheck()
 
 
             }.addOnFailureListener { err ->

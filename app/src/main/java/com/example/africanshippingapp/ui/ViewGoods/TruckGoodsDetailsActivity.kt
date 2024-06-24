@@ -66,7 +66,7 @@ class TruckGoodsDetailsActivity : AppCompatActivity() {
     private fun deleteRecord(
         id: String
     ){
-        val dbRef = FirebaseDatabase.getInstance().getReference("Goods").child(id)
+        val dbRef = FirebaseDatabase.getInstance().getReference("june_truck").child(id)
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
@@ -130,7 +130,7 @@ class TruckGoodsDetailsActivity : AppCompatActivity() {
         goodsNumber: String,
         storeName: String
     ) {
-        val dbRef = FirebaseDatabase.getInstance().getReference("Goods").child(goodsId)
+        val dbRef = FirebaseDatabase.getInstance().getReference("june_truck").child(goodsId)
         val empInfo = GoodsModel(goodsId, goodsName,goodsNumber, storeName)
         dbRef.setValue(empInfo)
     }

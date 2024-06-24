@@ -29,7 +29,7 @@ class InsertionActivity : AppCompatActivity() {
         etStoreNumber = findViewById(R.id.etStore)
         btnSaveData = findViewById(R.id.btnSave)
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Goods")
+        dbRef = FirebaseDatabase.getInstance().getReference("june_truck")
 
         btnSaveData.setOnClickListener {
             saveEmployeeData()

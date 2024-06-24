@@ -68,7 +68,7 @@ class ViewTruckGoods : AppCompatActivity() {
         empRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Goods")
+        dbRef = FirebaseDatabase.getInstance().getReference("june_truck")
 
         dbRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
