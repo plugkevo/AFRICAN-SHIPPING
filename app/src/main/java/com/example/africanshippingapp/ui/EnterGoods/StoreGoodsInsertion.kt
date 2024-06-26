@@ -20,7 +20,7 @@ class StoreGoodsInsertion : AppCompatActivity() {
     private lateinit var btnSaveData: Button
     private lateinit var radioGroup: RadioGroup
     private lateinit var dbRef: DatabaseReference
-    private lateinit var radioGroup2: RadioGroup
+   // private lateinit var radioGroup2: RadioGroup
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -30,7 +30,7 @@ class StoreGoodsInsertion : AppCompatActivity() {
         etGoodsNo = findViewById(R.id.etGoodsNo)
         btnSaveData = findViewById(R.id.btnSave)
         radioGroup = findViewById(R.id.radioGroup)
-        radioGroup2= findViewById(R.id.radioGroup2)
+        //radioGroup2= findViewById(R.id.radioGroup2)
 
 
         dbRef = FirebaseDatabase.getInstance().getReference("june_store")
@@ -46,15 +46,15 @@ class StoreGoodsInsertion : AppCompatActivity() {
         val GoodName = etGoodsName.text.toString()
         val GoodsNo = etGoodsNo.text.toString()
         var StoreNo = ""
-        var deliveryStatus =""
+       // var deliveryStatus =""
 
         val selectedId = radioGroup.checkedRadioButtonId
         val radioButton = findViewById<RadioButton>(selectedId)
         StoreNo = radioButton.text.toString()
 
-        val selectedId2 = radioGroup2.checkedRadioButtonId
-        val radioButton2 = findViewById<RadioButton>(selectedId2)
-        deliveryStatus = radioButton2.text.toString()
+        //val selectedId2 = radioGroup2.checkedRadioButtonId
+        //val radioButton2 = findViewById<RadioButton>(selectedId2)
+       // deliveryStatus = radioButton2.text.toString()
 
         if (GoodsNo.isEmpty()) {
             etGoodsNo.error = "Please enter Goods Number"
@@ -62,7 +62,7 @@ class StoreGoodsInsertion : AppCompatActivity() {
 
         val empId = dbRef.push().key!!
 
-        val employee = GoodsModel(empId, GoodName, GoodsNo, StoreNo, deliveryStatus)
+        val employee = GoodsModel(empId, GoodName, GoodsNo, StoreNo)
 
         dbRef.child(empId).setValue(employee)
             .addOnCompleteListener {
@@ -71,7 +71,7 @@ class StoreGoodsInsertion : AppCompatActivity() {
                 etGoodsName.text.clear()
                 etGoodsNo.text.clear()
                 radioGroup.clearCheck()
-                radioGroup2.clearCheck()
+               //radioGroup2.clearCheck()
 
 
             }.addOnFailureListener { err ->

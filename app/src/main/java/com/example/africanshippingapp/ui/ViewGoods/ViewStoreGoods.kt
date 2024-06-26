@@ -128,7 +128,7 @@ class ViewStoreGoods : AppCompatActivity() {
                     //when an item is clicked the all the employee data is displayed in a different page
                     mAdapter.setOnItemClickListener(object : ViewGoodsAdapter.onItemClickListener {
                         override fun onItemClick(position: Int) {
-                            val intent = Intent(this@ViewStoreGoods, ViewStoreGoods::class.java)
+                            val intent = Intent(this@ViewStoreGoods, StoreGoodsDetails::class.java)
 
                             //put extras
                             intent.putExtra("goodsId", searchResults[position].GoodsId)
