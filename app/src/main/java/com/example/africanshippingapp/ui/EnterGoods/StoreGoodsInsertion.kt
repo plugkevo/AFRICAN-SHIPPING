@@ -70,7 +70,7 @@ class StoreGoodsInsertion : AppCompatActivity() {
 
                 etGoodsName.text.clear()
                 etGoodsNo.text.clear()
-                radioGroup.clearCheck()
+
                //radioGroup2.clearCheck()
 
 
